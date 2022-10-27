@@ -105,3 +105,33 @@ const promptManager= () => {
       promptMenu();
     })
   }
+// Add a new Intern
+const promptIntern = () => {
+    return inquirer
+    .prompt([
+      ...basicQuestions,
+      {
+        type: 'input',
+        name: 'school',
+        message: 'What is the school name? ',
+        validate: numInput => {
+          if (numInput) {
+            return true;
+          } else {
+            console.log('Please enter the school name!');
+            return false;
+          }
+        }
+      },
+    ])
+    .then(answers => {
+      console.log(answers);
+      const intern = new Intern(answers.name, 
+                                answers.id, 
+                                answers.email, 
+                                answers.school);
+      teamMembers.push(intern);
+      promptMenu();
+    })
+  }
+  
