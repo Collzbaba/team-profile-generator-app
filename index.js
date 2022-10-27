@@ -134,4 +134,34 @@ const promptIntern = () => {
       promptMenu();
     })
   }
+  // Add prompt menu
+const promptMenu = () => {
+    return inquirer
+      .prompt([
+        {
+          type: 'list',
+          name: 'menu',
+          message: 'Please select your option: ',
+          choices: ['add a manager', 
+                    'add an engineer', 
+                    'add an intern', 
+                    'finish my team'],
+        }
+      ])
+      .then(userChoice => {
+        switch (userChoice.menu) {
+          case "add a manager":
+            promptManager();
+            break;
+          case "add an engineer":
+            promptEngineer();
+            break;
+          case "add an intern":
+            promptIntern();
+            break;
+          default:
+            buildTeam();
+        }
+      })
+  }
   
