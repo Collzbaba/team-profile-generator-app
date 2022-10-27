@@ -164,4 +164,13 @@ const promptMenu = () => {
         }
       })
   }
+  // Add finished building team
+const buildTeam = () => {
+    const HTMLContent = generateTeam(teamMembers);
   
+  
+    fs.writeFile('./dist/index.html', HTMLContent, (err) =>
+    err ? console.log(err) : console.log('Successfully created HTML!'))
+  }
+  // promptManager();
+  promptMenu();
