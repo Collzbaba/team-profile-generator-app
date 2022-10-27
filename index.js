@@ -47,3 +47,34 @@ const basicQuestions = [{
     }
   }
 }]
+// Add a new manager
+const promptManager= () => {
+    return inquirer
+      .prompt([
+        ...basicQuestions,
+        {
+          type: 'input',
+          name: 'officeNumber',
+          message: 'What is the office number? ',
+          validate: numInput => {
+            if (numInput) {
+              return true;
+            } else {
+              console.log('Please enter the office number!');
+              return false;
+            }
+          }
+        },
+      ])
+      .then(answers => {
+        console.log(answers);
+        const manager = new Manager(answers.name, 
+                                    answers.id, 
+                                    answers.email, 
+                                    answers.officeNumber);
+        teamMembers.push(manager);
+        promptMenu();
+      })
+  }
+  
+  
