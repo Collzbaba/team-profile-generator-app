@@ -7,7 +7,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "npm start"
+    "test": "npm run start"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/Collzbaba/team-profile-generator-app/issues"
   },
-  "homepage": "https://github.com/Collzbaba/team-profile-generator-app#readme"
+  "homepage": "https://github.com/Collzbaba/team-profile-generator-app#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
 }
