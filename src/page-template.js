@@ -21,4 +21,26 @@ const generateTeam = (team) => {
       </div>
       `;
     };
-    
+    //create engineer html card
+  const generateEngineer = (engineer) => {
+    return `
+      <div class="card employee-card shadow mb-5 rounded" style="width: 18rem;">
+        <div class="card-header bg-primary">
+          <h2 class="card-title text-light">${engineer.getName()}</h2>
+          <h3 class="card-title text-light"><i class="fas fa-glasses mr-2"></i>${engineer.getRole()}</h3>
+        </div>
+        <div class="container bg-light">
+          <div class="card-body">
+            <ul class="list-group list-group-flush table-bordered">
+              <li class="list-group-item">ID: ${engineer.getId()}</li>
+              <li class="list-group-item">Email: 
+                <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
+              <li class="list-group-item">GitHub: 
+                <a href="https://github.com/${engineer.getGithub()}" target="_blank">${engineer.getGithub()}</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    `;
+  };
+  
