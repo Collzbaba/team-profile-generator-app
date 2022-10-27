@@ -5,7 +5,7 @@
   ***
 
 # Description:
-This project is to build a Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person. As testing is key to making code maintainable, a wiritten  unit test for every part of the code and ensure that it passes each test is required.
+This project is to build a Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person. 
 ***
 
 ## User Story summaries that, 
@@ -42,7 +42,7 @@ THEN I exit the application, and the HTML is generated
 
 
 ## Screenshot:
-![screenshots]()
+![screenshots](./image/team-profile-generator.png)
 ***
 
 ## Video:
