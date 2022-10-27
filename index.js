@@ -76,5 +76,33 @@ const promptManager= () => {
         promptMenu();
       })
   }
-  
+  // Add a new Engineer
+  const promptEngineer = () => {
+    return inquirer
+    .prompt([
+      ...basicQuestions,
+      {
+        type: 'input',
+        name: 'github',
+        message: 'What is the Github username? ',
+        validate: numInput => {
+          if (numInput) {
+            return true;
+          } else {
+            console.log('Please enter the Github username!');
+            return false;
+          }
+        }
+      },
+    ])
+    .then(answers => {
+      console.log(answers);
+      const engineer = new Engineer(answers.name, 
+                                    answers.id, 
+                                    answers.email, 
+                                    answers.github);
+      teamMembers.push(engineer);
+      promptMenu();
+    })
+  }
   
