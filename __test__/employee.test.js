@@ -4,9 +4,9 @@ const Employee = require("../lib/Employee");
 
 describe("Employee", () => {
   const testEmployee = {
-    name: "Blessed",
-    id: 103,
-    email: "blessed@gmail.com",
+    name: "Sean",
+    id: 201,
+    email: "sean@gmail.com",
   };
 
   const obj = new Employee(
@@ -23,7 +23,7 @@ describe("Employee", () => {
 
   describe("getName", () => {
     it("should return name when getName method is called", () => {
-      expect(obj.getName()).toEqual("Blessed");
+      expect(obj.getName()).toEqual("sean");
     });
   });
 
@@ -35,7 +35,7 @@ describe("Employee", () => {
 
   describe("Email", () => {
     it("should return email when getEmail method is called", () => {
-      expect(obj.getEmail()).toEqual("blessed@gmail.com");
+      expect(obj.getEmail()).toEqual("seand@gmail.com");
     });
   });
 });
