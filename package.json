@@ -1,0 +1,22 @@
+{
+  "name": "team-profile-generator-app",
+  "version": "1.0.0",
+  "description": "This project is to build a Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Collzbaba/team-profile-generator-app.git"
+  },
+  "author": "Blessed Adodo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Collzbaba/team-profile-generator-app/issues"
+  },
+  "homepage": "https://github.com/Collzbaba/team-profile-generator-app#readme"
+}
