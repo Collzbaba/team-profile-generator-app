@@ -64,3 +64,61 @@ const generateTeam = (team) => {
       </div>
     `;
   };
+  const html = []
+
+  html.push (team
+    .filter((employee) => employee.getRole() === "Manager")
+    .map((manager) => generateManager(manager)).join("")
+  );
+  html.push (team
+    .filter((employee) => employee.getRole() === "Engineer")
+    .map((engineer) => generateEngineer(engineer)).join("")
+  );
+  html.push (team
+    .filter((employee) => employee.getRole() === "Intern")
+    .map((intern) => generateIntern(intern)).join("")
+  );
+  return html.join("");
+};
+
+// Generate entire page
+module.exports = (team) => {
+  return `
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      />
+      <link
+          rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+          crossorigin="anonymous"
+      />
+      <link rel="stylesheet" href="style.css" />
+      <title>Team Profile Generator</title>
+    </head>
+    <body>
+      <div class="container-fluid">
+      <nav class="navbar text-light justify-content-center bg-danger">
+          <a class="navbar-brand">
+            <h2>My Team</h2>
+          </a>
+        </nav>
+      </div>
+      <div class="container mt-2">
+        <div class="row">
+          <div class="team-area col-12 flex-wrap d-flex justify-content-center">
+            ${generateTeam(team)}
+          </div>
+        </div>
+      </div>
+    </body>
+    </html>
+  `
+}
