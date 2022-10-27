@@ -1,12 +1,10 @@
-
-
 const Employee = require("../lib/Employee");
 
 describe("Employee", () => {
   const testEmployee = {
-    name: "Sean",
-    id: 201,
-    email: "sean@gmail.com",
+    name: "Fav",
+    id: 120,
+    email: "fav@gmail.com",
   };
 
   const obj = new Employee(
@@ -23,19 +21,19 @@ describe("Employee", () => {
 
   describe("getName", () => {
     it("should return name when getName method is called", () => {
-      expect(obj.getName()).toEqual("sean");
+      expect(obj.getName()).toEqual("fav");
     });
   });
 
   describe("Id", () => {
     it("should return id when getId method is called", () => {
-      expect(obj.getId()).toEqual(103);
+      expect(obj.getId()).toEqual(120);
     });
   });
 
   describe("Email", () => {
     it("should return email when getEmail method is called", () => {
-      expect(obj.getEmail()).toEqual("seand@gmail.com");
+      expect(obj.getEmail()).toEqual("fav@gmail.com");
     });
   });
 });
