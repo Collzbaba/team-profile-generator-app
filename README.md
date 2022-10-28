@@ -43,6 +43,7 @@ THEN I exit the application, and the HTML is generated
 
 ## Screenshot:
 ![screenshots](./image/team-profile-generator.png)
+![screenshots](./image/test-screenshot.png)
 ***
 
 ## Video:
