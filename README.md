@@ -36,7 +36,8 @@ WHEN I decide to finish building my team
 THEN I exit the application, and the HTML is generated
 ***
 
-## URL: 
+## Github URL: 
+https://github.com/Collzbaba/team-profile-generator-app
 
 ***
 
