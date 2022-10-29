@@ -46,7 +46,9 @@ THEN I exit the application, and the HTML is generated
 ![screenshots](./image/test-screenshot.png)
 ***
 
-## Video:
+## Video Walkthrough:
+https://www.awesomescreenshot.com/video/12081469?key=3af71984216838d52ad929c7f8390e5e
+
 ***
 
 
